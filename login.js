@@ -1,13 +1,10 @@
-const btn = document.querySelector(".logInButton"); 
-const menu = document.querySelector(".loginframe");
-let isMenuShowed = false;
+const outbtn = document.querySelector(".logInButton"); 
+const inbtn = document.querySelector(".loginformbutton");
+const form = document.querySelector(".loginform");
 
-btn.addEventListener('click', () => { 
-    if (isMenuShowed === false) {
-        menu.style.backgroundColor = 'rgba(22, 22, 22, 1)';
-        isMenuShowed = true;
-    } else {
-        menu.style.backgroundColor = 'rgba(22, 22, 22, 0)';
-        isMenuShowed = false;
-    }   
+outbtn.addEventListener('click', (e) => { 
+    form.classList.toggle('show');
+    inbtn.addEventListener('click', (e) => {
+        console.log("Log in button clicked!")
+    })
 });
